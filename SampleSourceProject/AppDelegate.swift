@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // テーブルの初期化等は、アプリの起動時に行える
+        let SampleModelImpl = SwinjectStoryboard.defaultContainer.resolve(SampleModelProtocol.self)!
+        SampleModelImpl.initialize()
         return true
     }
 

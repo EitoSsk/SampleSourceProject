@@ -16,5 +16,9 @@ extension SwinjectStoryboard {
 
     class func setup() {
         
+        // SampleModelProtocol
+        defaultContainer.register(SampleModelProtocol.self) { _ in
+            SampleModelImpl()
+        }
     }
 }
