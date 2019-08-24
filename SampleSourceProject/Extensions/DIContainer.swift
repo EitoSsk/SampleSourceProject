@@ -20,5 +20,14 @@ extension SwinjectStoryboard {
         defaultContainer.register(SampleModelProtocol.self) { _ in
             SampleModelImpl()
         }
+        
+        // SampleAPIProtocol
+        defaultContainer.register(SampleAPIModelProtocol.self) { _ in
+            SampleAPIModel()
+        }
+        
+        defaultContainer.register(SamplePresenterProtocol.self) { r in
+            SamplePresenter(sampleAPIModel: r.resolve(SampleAPIModelProtocol.self)!)
+        }
     }
 }

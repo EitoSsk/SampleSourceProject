@@ -19,6 +19,9 @@
 		EAA46D3623115CED00E6E2C8 /* SampleSourceProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D3523115CED00E6E2C8 /* SampleSourceProjectUITests.swift */; };
 		EAA46D452311644000E6E2C8 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D442311644000E6E2C8 /* DIContainer.swift */; };
 		EAA46D4E231169A800E6E2C8 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D4D231169A800E6E2C8 /* SampleModel.swift */; };
+		EAA46D522311808100E6E2C8 /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D512311808100E6E2C8 /* SamplePresenter.swift */; };
+		EAA46D542311809900E6E2C8 /* SampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D532311809900E6E2C8 /* SampleProtocol.swift */; };
+		EAA46D562311815E00E6E2C8 /* SampleAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA46D552311815E00E6E2C8 /* SampleAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		EAA46D3723115CEE00E6E2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA46D442311644000E6E2C8 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		EAA46D4D231169A800E6E2C8 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		EAA46D512311808100E6E2C8 /* SamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
+		EAA46D532311809900E6E2C8 /* SampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProtocol.swift; sourceTree = "<group>"; };
+		EAA46D552311815E00E6E2C8 /* SampleAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 			children = (
 				EAA46D43231163FC00E6E2C8 /* Extensions */,
 				EAA46D462311677600E6E2C8 /* Models */,
+				EAA46D4F2311788400E6E2C8 /* Presenters */,
 				EAA46D1523115CEC00E6E2C8 /* AppDelegate.swift */,
 				EAA46D1723115CEC00E6E2C8 /* ViewController.swift */,
 				EAA46D1923115CEC00E6E2C8 /* Main.storyboard */,
@@ -183,8 +190,26 @@
 			isa = PBXGroup;
 			children = (
 				EAA46D4D231169A800E6E2C8 /* SampleModel.swift */,
+				EAA46D552311815E00E6E2C8 /* SampleAPIModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EAA46D4F2311788400E6E2C8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EAA46D512311808100E6E2C8 /* SamplePresenter.swift */,
+				EAA46D50231178A900E6E2C8 /* Protocols */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		EAA46D50231178A900E6E2C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EAA46D532311809900E6E2C8 /* SampleProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,8 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA46D522311808100E6E2C8 /* SamplePresenter.swift in Sources */,
+				EAA46D542311809900E6E2C8 /* SampleProtocol.swift in Sources */,
 				EAA46D1823115CEC00E6E2C8 /* ViewController.swift in Sources */,
 				EAA46D452311644000E6E2C8 /* DIContainer.swift in Sources */,
+				EAA46D562311815E00E6E2C8 /* SampleAPIModel.swift in Sources */,
 				EAA46D1623115CEC00E6E2C8 /* AppDelegate.swift in Sources */,
 				EAA46D4E231169A800E6E2C8 /* SampleModel.swift in Sources */,
 			);

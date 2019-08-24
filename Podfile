@@ -9,6 +9,8 @@ target 'SampleSourceProject' do
   pod 'RealmSwift'
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 
   target 'SampleSourceProjectTests' do
     inherit! :search_paths
