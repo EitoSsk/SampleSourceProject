@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // UserDefaultsの初期化
+        if let hoge = getHoge(), hoge {
+            // true
+            print("isHoge")
+        } else {
+            // 初期化
+            setHoge(true)
+        }
+        
         // テーブルの初期化等は、アプリの起動時に行える
         let SampleModelImpl = SwinjectStoryboard.defaultContainer.resolve(SampleModelProtocol.self)!
         SampleModelImpl.initialize()
@@ -43,6 +53,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func getHoge() -> Bool? {
+        let ud = UserDefaults.standard
+        guard let _ = ud.object(forKey: "hoge") else {
+            return nil
+        }
+        return ud.bool(forKey: "hoge")
+    }
+    
+    private func setHoge(_ isHoge: Bool?) {
+        let ud = UserDefaults.standard
+        ud.set(isHoge, forKey: "hoge")
+        ud.synchronize()
     }
 
 
