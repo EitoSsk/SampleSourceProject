@@ -20,10 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // UserDefaultsの初期化
         if let hoge = getHoge(), hoge {
-            // true
-            print("isHoge")
+            print(getHoge())
         } else {
-            // 初期化
+            print(getHoge())
             setHoge(true)
         }
         
